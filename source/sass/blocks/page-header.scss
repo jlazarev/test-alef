@@ -1,0 +1,150 @@
+.page-header {
+  background-color: $basic-white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $mobile-width) {
+    box-shadow: none;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 4px;
+
+  @media (max-width: $mobile-width) {
+    padding: 18px 20px 21px;
+  }
+}
+
+.page-header__logo {
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.page-header__info {
+  display: flex;
+  margin-right: 3px;
+
+  a {
+    margin-left: 25px;
+  }
+}
+
+.page-header__menu-button {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    color: $basic-black;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+  }
+}
+
+.page-header__menu {
+  display: none;
+
+  margin-right: 20px;
+  padding-top: 7px;
+}
+
+.page-header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  max-width: 720px;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    max-width: none;
+  }
+}
+
+.page-header__menu-item {
+  margin-left: 10px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+}
+
+// close
+
+.page-header--close-menu .page-header__menu {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+// open
+
+.page-header--open-menu {
+  @media (max-width: $mobile-width) {
+    // background-color: $special_black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow-y: scroll;
+    min-height: 100vh;
+  }
+}
+
+.page-header--open-menu .page-header__menu {
+  @media (max-width: $mobile-width) {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90px;
+    z-index: 1;
+  }
+}
+
+// no-js
+
+.page-header--nojs {
+  @media (max-width: $mobile-width) {
+    display: block;
+    position: static;
+    // background-color: $basic_orange;
+  }
+}
+
+.page-header--nojs .page-header__wrapper {
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+
+    &::before {
+      content: "";
+      width: 25px;
+      height: 1px;
+    }
+  }
+}
+
+.page-header--nojs .page-header__menu-button {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.page-header--nojs .page-header__menu {
+  @media (max-width: $mobile-width) {
+    display: block;
+    // background-color: $special_black;
+    padding-top: 8px;
+  }
+}
