@@ -12,7 +12,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--close-menu page-header--nojs">
+  <header class="page-header page-header--close-menu">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo">
         <span class="visually-hidden">Logo</span>
@@ -37,6 +37,7 @@
         </a>
 
         <a class="page-header__basket" href="#">
+          <span class="visually-hidden">Корзина</span>
           <svg width="24" height="24">
             <use xlink:href="img/sprite_auto.svg#icon-basket"></use>
           </svg>
@@ -48,33 +49,31 @@
         <svg class="page-header__open-btn" width="18" height="12">
           <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
         </svg>
+        <svg class="page-header__close-btn" width="24" height="24">
+          <use xlink:href="img/sprite_auto.svg#icon-close-btn"></use>
+        </svg>
       </button>
 
       <nav class="page-header__menu">
         <ul class="page-header__menu-list">
           <li class="page-header__menu-item">
             <a class="page-header__menu-link" href="#">
-              <span>FAQ</span>
+              <span>Постельное белье</span>
             </a>
           </li>
           <li class="page-header__menu-item">
             <a class="page-header__menu-link" href="#">
-              <span>Оплата и доставка</span>
+              <span>Одежда для дома</span>
             </a>
           </li>
           <li class="page-header__menu-item">
             <a class="page-header__menu-link" href="#">
-              <span>Возврат</span>
+              <span>Одежда для улицы</span>
             </a>
           </li>
           <li class="page-header__menu-item">
             <a class="page-header__menu-link" href="#">
-              <span>Иследования</span>
-            </a>
-          </li>
-          <li class="page-header__menu-item">
-            <a class="page-header__menu-link" href="#">
-              <span>Личный кабинет</span>
+              <span>Выход</span>
             </a>
           </li>
         </ul>
@@ -173,21 +172,21 @@
             <div class="product-card__buy">
               <div class="product-card__buy-block">
                 <div class="product-card__count">
-                  <button class="product-card__btn" type="button" aria-label="плюс">
+                  <button class="product-card__btn plus-btn" type="button" aria-label="плюс">
                     +
                   </button>
                   <input id="count" name="count" type="text" value="1">
-                  <button class="product-card__btn" type="button" aria-label="минус">
+                  <button class="product-card__btn minus-btn" type="button" aria-label="минус">
                     -
                   </button>
                 </div>
 
                 <div class="product-card__btn-block">
-                  <button class="product-card__buy-btn" type="button">
+                  <button class="product-card__buy-btn link-popup" type="button">
                     Добавить в корзину
                   </button>
 
-                  <button class="product-card__heart-btn" type="button">
+                  <button class="product-card__heart-btn link-favorites" type="button">
                     <svg width="24" height="24">
                       <use xlink:href="img/sprite_auto.svg#icon-heart"></use>
                     </svg>
@@ -249,11 +248,126 @@
         <h2 class="visually-hidden">Новые коллекции</h2>
 
         <ul class="promo__gallery">
-          <li class="promo__big-pic"><img src="img/gallery-1.jpg" alt="new collection"></li>
-          <li><img src="img/gallery-2.jpg" alt="new collection"></li>
-          <li><img src="img/gallery-3.jpg" alt="new collection"></li>
-          <li><img src="img/gallery-4.jpg" alt="new collection"></li>
-          <li><img src="img/gallery-5.jpg" alt="new collection"></li>
+          <li class="promo__big-pic">
+            <img src="img/gallery-1.jpg" alt="new collection">
+            <div class="promo__img-hover">
+              <a href="#" class="promo__img-full">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite_auto.svg#icon-full-screen"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="promo__img-link">
+                <svg width="48" height="48">
+                  <use xlink:href="img/sprite_auto.svg#icon-basket"></use>
+                </svg>
+                Узнай, что на мне
+              </a>
+
+              <button class="promo__img-likes" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite_auto.svg#icon-heart"></use>
+                </svg>
+                200
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="img/gallery-2.jpg" alt="new collection">
+            <div class="promo__img-hover">
+              <a href="#" class="promo__img-full">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite_auto.svg#icon-full-screen"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="promo__img-link">
+                <svg width="48" height="48">
+                  <use xlink:href="img/sprite_auto.svg#icon-basket"></use>
+                </svg>
+                Узнай, что на мне
+              </a>
+
+              <button class="promo__img-likes" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite_auto.svg#icon-heart"></use>
+                </svg>
+                200
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="img/gallery-3.jpg" alt="new collection">
+            <div class="promo__img-hover">
+              <a href="#" class="promo__img-full">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite_auto.svg#icon-full-screen"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="promo__img-link">
+                <svg width="48" height="48">
+                  <use xlink:href="img/sprite_auto.svg#icon-basket"></use>
+                </svg>
+                Узнай, что на мне
+              </a>
+
+              <button class="promo__img-likes" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite_auto.svg#icon-heart"></use>
+                </svg>
+                200
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="img/gallery-4.jpg" alt="new collection">
+            <div class="promo__img-hover">
+              <a href="#" class="promo__img-full">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite_auto.svg#icon-full-screen"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="promo__img-link">
+                <svg width="48" height="48">
+                  <use xlink:href="img/sprite_auto.svg#icon-basket"></use>
+                </svg>
+                Узнай, что на мне
+              </a>
+
+              <button class="promo__img-likes" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite_auto.svg#icon-heart"></use>
+                </svg>
+                200
+              </button>
+            </div>
+          </li>
+          <li>
+            <img src="img/gallery-5.jpg" alt="new collection">
+            <div class="promo__img-hover">
+              <a href="#" class="promo__img-full">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite_auto.svg#icon-full-screen"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="promo__img-link">
+                <svg width="48" height="48">
+                  <use xlink:href="img/sprite_auto.svg#icon-basket"></use>
+                </svg>
+                Узнай, что на мне
+              </a>
+
+              <button class="promo__img-likes" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite_auto.svg#icon-heart"></use>
+                </svg>
+                200
+              </button>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -288,14 +402,35 @@
           Узнайте первыми о новинках и акциях
         </h3>
 
-        <form class="page-footer__subscription-form" action="https://.../" method="post">
-          <input type="email" name="email" placeholder="Адрес электронной почты">
+        <form class="page-footer__subscription-form" action="https://echo.htmlacademy.ru" method="post">
+          <input id="email-footer" type="email" name="email" placeholder="Адрес электронной почты">
 
           <button type="submit">Подписаться</button>
         </form>
       </div>
     </div>
   </footer>
+
+  <div class="popup">
+    <div class="popup__wrapper">
+      <div class="popup__up-block">
+        <div class="popup__message"> Товар '...' в количестве '...' единиц добавлен в корзину</div>
+      </div>
+
+      <div class="popup__down-block">
+        <div class="popup__links-block">
+          <a class="popup__to-cart" href="#">Перейти в карзину</a>
+        </div>
+      </div>
+
+      <button class="popup__close-btn" type="button">
+        <span class="visually-hidden">close</span>
+        <svg width="14" height="14">
+          <use xlink:href="img/sprite_auto.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

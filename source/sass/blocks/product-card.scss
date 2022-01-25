@@ -24,6 +24,25 @@
     width: auto;
     padding: 23px 20px 10px;
   }
+
+  a {
+    &:hover,
+    &:focus {
+      color: $basic_grey;
+
+      &::after {
+        background-color: $basic_grey;
+      }
+    }
+
+    &:active {
+      color: tomato;
+
+      &::after {
+        background-color: tomato;
+      }
+    }
+  }
 }
 
 .product-card__info a {
@@ -141,6 +160,13 @@
     -moz-appearance: none;
     appearance: none;
     margin-bottom: 13px;
+    cursor: pointer;
+
+    @media (max-width: $mobile-width) {
+      min-width: auto;
+      max-width: 315px;
+      width: 100%;
+    }
   }
 }
 
@@ -149,6 +175,12 @@
   transform: rotate(90deg);
   top: 12px;
   left: 289px;
+  cursor: pointer;
+
+  @media (max-width: 355px) {
+    left: auto;
+    right: 20px;
+  }
 }
 
 .product-card__define-size {
@@ -196,6 +228,14 @@
     width: 45px;
     background-color: $light_grey;
     height: 44px;
+
+    &:hover {
+      background-color: $basic_grey;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   input {
@@ -216,6 +256,14 @@
   background-color: $basic_black;
   color: $basic_white;
   height: 44px;
+
+  &:hover {
+    background-color: $basic_grey;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .product-card__buy-btn {
@@ -266,18 +314,19 @@
   order: -1;
 
   @media (max-width: $mobile-width) {
-    width: auto;
+    width: 100%;
     max-width: 600px;
     margin-right: 0;
   }
 }
 
 .product-card__images img {
-  display: none
+  display: none;
 }
 
 .product-card__images .active {
-  display: block
+  display: block;
+  width: 100%;
 }
 
 .product-card__thumbs {
@@ -313,6 +362,10 @@
       left: 0;
       right: 0;
       background-color: rgba($basic_white, 0.4);
+    }
+
+    &:hover::after {
+      background-color: transparent;
     }
   }
 
@@ -351,6 +404,23 @@
       background-color: $basic_black;
       bottom: 3px;
       left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $basic_grey;
+
+      &::after {
+        background-color: $basic_grey;
+      }
+    }
+
+    &:active {
+      color: tomato;
+
+      &::after {
+        background-color: tomato;
+      }
     }
   }
 }

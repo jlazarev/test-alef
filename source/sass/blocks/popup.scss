@@ -1,0 +1,133 @@
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba($color: $basic_black, $alpha: 0.25);
+  padding-top: 136px;
+  display: none;
+  z-index: 20;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 117px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &--page {
+    position: static;
+    padding: 0;
+    background-color: $basic_white;
+    border-top: 1px solid $border;
+
+    & .popup__wrapper {
+      box-shadow: none;
+    }
+
+    & .popup__close-btn {
+      display: none;
+    }
+  }
+}
+
+.popup__wrapper {
+  max-width: 500px;
+  margin: auto;
+  background-color: $basic_white;
+  color: $basic_black;
+  position: relative;
+  box-shadow: 0 4px 32px rgba($basic-black, 0.24);
+}
+
+.popup__up-block {
+  padding: 47px 35px 39px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid $border;
+
+  @media (max-width: $mobile-width) {
+    padding: 40px 15px 19px;
+  }
+}
+
+.popup__message {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+    line-height: 120%;
+    padding: 0 25px;
+    margin-bottom: 33px;
+  }
+}
+
+.popup__down-block {
+  padding: 15px 35px;
+
+  @media (max-width: $mobile-width) {
+    padding: 18px 15px 25px;
+  }
+}
+
+.popup__links-block {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & a {
+    text-decoration: none;
+    height: 68px;
+    width: 200px;
+    text-align: center;
+    padding: 23px 0;
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.popup__to-cart {
+  background-color: $basic_grey;
+  color: $basic_white;
+
+  &:focus,
+  &:hover {
+    color: $basic_grey;
+    border: 1px solid $basic_grey;
+    background-color: transparent;
+  }
+}
+
+.popup__close-btn {
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    top: 15px;
+    right: 15px;
+  }
+}
